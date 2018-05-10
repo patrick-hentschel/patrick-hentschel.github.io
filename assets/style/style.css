@@ -1,4 +1,5 @@
-/* COre Styles*/
+/* Core Styles*/
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,9 +16,11 @@ img {
     height: auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 0;
-    padding: 1em 0;   
+    padding: 1em 0;
 }
 
 p {
@@ -42,11 +45,13 @@ p {
 
 
 /* Header Showcase */
+
 #showcase {
     min-height: 450px;
     color: #fff;
     text-align: center;
 }
+
 #showcase .bg-image {
     position: absolute;
     background: #333;
@@ -63,7 +68,8 @@ p {
 }
 
 
-#showcase .content-wrap, #section-a .content-wrap {
+#showcase .content-wrap,
+#section-a .content-wrap {
     padding: 0 1.5em;
 }
 
@@ -74,6 +80,7 @@ p {
 }
 
 /* Section B */
+
 #section-b {
     padding: 2em 1em 1em;
     color: #333;
@@ -97,6 +104,7 @@ p {
 }
 
 /* Section C */
+
 #section-c {
     background: #fff;
     color: #333;
@@ -104,6 +112,7 @@ p {
 }
 
 /* Section D / Boxes */
+
 #section-d .box {
     padding: 2em;
     color: #fff;
@@ -114,6 +123,7 @@ p {
 }
 
 /* Footer */
+
 #main-footer {
     padding: 2em;
     background: #333;
@@ -128,14 +138,17 @@ p {
 
 
 /* Media Queries */
-@media(min-width: 700px){
+
+@media(min-width: 700px) {
     .grid {
         display: grid;
-        grid-template-columns: 1fr repeat(2, minmax(auto,25em)) 1fr;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
     }
 
     #section-a .content-text {
+        -webkit-columns: 2;
         columns: 2;
+        -webkit-column-gap: 2em;
         column-gap: 2em;
     }
 
@@ -144,20 +157,25 @@ p {
     }
 
 
-    .content-wrap, #section-b ul {
+    .content-wrap,
+    #section-b ul {
         grid-column: 2/4;
     }
 
-    .box, #main-footer div {
+    .box,
+    #main-footer div {
         grid-column: span 2;
     }
 
     #section-b ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
     }
 
     #section-b li {
-        width:31%;
+        width: 31%;
     }
 }
